@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/ArtemSafin-WebDev/stroiteli/static/css/main.11342a83.chunk.css",
+    "main.js": "/ArtemSafin-WebDev/stroiteli/static/js/main.dbf90009.chunk.js",
+    "main.js.map": "/ArtemSafin-WebDev/stroiteli/static/js/main.dbf90009.chunk.js.map",
+    "runtime-main.js": "/ArtemSafin-WebDev/stroiteli/static/js/runtime-main.a5da4572.js",
+    "runtime-main.js.map": "/ArtemSafin-WebDev/stroiteli/static/js/runtime-main.a5da4572.js.map",
+    "static/js/2.542f2c6b.chunk.js": "/ArtemSafin-WebDev/stroiteli/static/js/2.542f2c6b.chunk.js",
+    "static/js/2.542f2c6b.chunk.js.map": "/ArtemSafin-WebDev/stroiteli/static/js/2.542f2c6b.chunk.js.map",
+    "index.html": "/ArtemSafin-WebDev/stroiteli/index.html",
+    "static/css/main.11342a83.chunk.css.map": "/ArtemSafin-WebDev/stroiteli/static/css/main.11342a83.chunk.css.map",
+    "static/js/2.542f2c6b.chunk.js.LICENSE.txt": "/ArtemSafin-WebDev/stroiteli/static/js/2.542f2c6b.chunk.js.LICENSE.txt",
+    "static/media/1.7243ace9.jpg": "/ArtemSafin-WebDev/stroiteli/static/media/1.7243ace9.jpg",
+    "static/media/3.9f06182f.jpg": "/ArtemSafin-WebDev/stroiteli/static/media/3.9f06182f.jpg",
+    "static/media/4.d7fb2013.jpg": "/ArtemSafin-WebDev/stroiteli/static/media/4.d7fb2013.jpg",
+    "static/media/5.a342de06.jpg": "/ArtemSafin-WebDev/stroiteli/static/media/5.a342de06.jpg",
+    "static/media/DVSN.7076f341.svg": "/ArtemSafin-WebDev/stroiteli/static/media/DVSN.7076f341.svg",
+    "static/media/bookmark.ac28f134.svg": "/ArtemSafin-WebDev/stroiteli/static/media/bookmark.ac28f134.svg",
+    "static/media/bubble.8506018d.svg": "/ArtemSafin-WebDev/stroiteli/static/media/bubble.8506018d.svg",
+    "static/media/eye.03e9f066.svg": "/ArtemSafin-WebDev/stroiteli/static/media/eye.03e9f066.svg",
+    "static/media/instagram.1c2713d8.svg": "/ArtemSafin-WebDev/stroiteli/static/media/instagram.1c2713d8.svg",
+    "static/media/logo.f5ab7b17.svg": "/ArtemSafin-WebDev/stroiteli/static/media/logo.f5ab7b17.svg",
+    "static/media/play-large.5fa21377.svg": "/ArtemSafin-WebDev/stroiteli/static/media/play-large.5fa21377.svg",
+    "static/media/play-small.a705cbc9.svg": "/ArtemSafin-WebDev/stroiteli/static/media/play-small.a705cbc9.svg",
+    "static/media/twitter.b34ec2a7.svg": "/ArtemSafin-WebDev/stroiteli/static/media/twitter.b34ec2a7.svg",
+    "static/media/vk.9d003695.svg": "/ArtemSafin-WebDev/stroiteli/static/media/vk.9d003695.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a5da4572.js",
+    "static/js/2.542f2c6b.chunk.js",
+    "static/css/main.11342a83.chunk.css",
+    "static/js/main.dbf90009.chunk.js"
+  ]
+}
