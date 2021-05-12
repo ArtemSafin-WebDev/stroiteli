@@ -1,0 +1,363 @@
+@import "../../scss/mixins";
+
+.media {
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+}
+
+.mediaRow {
+  display: flex;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
+}
+
+.mediaLeftCol {
+  width: 34rem;
+  margin-right: 2rem;
+  flex-shrink: 0;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    margin: 0;
+    flex-shrink: 1;
+    margin-bottom: 3rem;
+  }
+}
+
+.mediaRightCol {
+  width: 50%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    flex-grow: 0;
+  }
+}
+
+.mediaSimpleCard {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  &:last-child {
+    border: none;
+    padding-bottom: 0;
+  }
+}
+
+.mediaSimpleCardContent {
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .mediaSimpleCardTitle {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.mediaSimpleCardTitle {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 130%;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+}
+
+.mediaCardInfo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 80;
+}
+
+.mediaCardDate {
+  font-size: 1.4rem;
+  line-height: 130%;
+  margin-right: 1rem;
+  color: #2e3f4b;
+}
+
+.mediaCardDateLight {
+  composes: mediaCardDate;
+  color: rgba(white, 0.5);
+}
+
+.mediaCardViews {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  color: #c4c4c4;
+  font-size: 1.4rem;
+  line-height: 130%;
+}
+
+.mediaCardViewsWhite {
+  composes: mediaCardViews;
+  color: white;
+}
+
+.mediaCardViewsIcon {
+  width: 1.6rem;
+  height: 1rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  fill: currentColor;
+}
+
+.mediaCardComments {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  color: #c4c4c4;
+  font-size: 1.4rem;
+  line-height: 130%;
+}
+
+.mediaCardCommentsGreen {
+  composes: mediaCardComments;
+  color: var(--primary-color);
+}
+
+.mediaCardCommentsWhite {
+  composes: mediaCardComments;
+  color: white;
+}
+
+.mediaCardCommentsIcon {
+  width: 1.3rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  fill: currentColor;
+}
+
+.mediaCardBookmark {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: #c4c4c4;
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.mediaCardBookmarkWhite {
+  composes: mediaCardBookmark;
+  color: white;
+}
+
+.mediaCardBookmarkIcon {
+  width: 1.6rem;
+  height: 1.8rem;
+  display: block;
+  fill: currentColor;
+  transition: fill 0.2s;
+}
+
+.mediaSmallFeaturedCard {
+  min-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+  color: white;
+
+  @include breakpoint(mobile) {
+    padding: 1.5rem;
+  }
+}
+
+.mediaSmallFeaturedCardWide {
+  composes: mediaSmallFeaturedCard;
+  min-height: 22.8rem;
+  justify-content: flex-start;
+  margin-bottom: 3rem;
+}
+
+.mediaSmallFeaturedCardContent {
+  display: block;
+}
+
+.mediaSmallFeaturedCardBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  &::after {
+    content: "";
+    background: linear-gradient(
+      0deg,
+      rgba(46, 63, 75, 0.2),
+      rgba(46, 63, 75, 0.2)
+    );
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.mediaSmallFeaturedCardBgImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mediaSmallFeaturedCardTitle {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 130%;
+  margin-bottom: 2rem;
+}
+
+.mediaHeadingBlock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  justify-content: space-between;
+  border-top: 1px solid #f0f0f0;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.mediaMainHeading {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+}
+
+.mediaShowMore {
+  font-size: 1.4rem;
+  line-height: 130%;
+  margin-left: 3rem;
+  color: var(--primary-color);
+
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+}
+
+.mediaCardsWithImages {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.mediaCardWithImage {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+  align-items: flex-start;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.mediaCardWithImageLinkWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+
+  &:hover ~ .mediaCardWithImageContent .mediaCardWithImageHeading {
+    color: var(--primary-color);
+  }
+}
+
+.mediaCardWithImageContainer {
+  position: relative;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  width: 50%;
+  margin-right: 2rem;
+  max-height: auto;
+
+
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 66.5%;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 56.25%;
+    }
+  }
+}
+
+.mediaCardWithImagePhoto {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mediaCardWithImageContent {
+  width: 30%;
+  flex-grow: 1;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    flex-grow: 0;
+  }
+}
+
+.mediaCardWithImageHeading {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 130%;
+  margin-bottom: 2rem;
+  transition: color 0.2s;
+  display: block;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 1.3rem;
+  }
+}

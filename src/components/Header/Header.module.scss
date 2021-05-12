@@ -1,0 +1,143 @@
+@import "../../scss/mixins";
+
+.header {
+  position: relative;
+  z-index: 500;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  border-bottom: 1px solid rgba(46, 63, 75, 0.1);
+
+  @include breakpoint(mobile) {
+    height: 6rem;
+  }
+}
+
+.headerLogo {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 2rem;
+  flex-shrink: 0;
+  @include breakpoint(mobile) {
+    margin-right: 2rem;
+  }
+}
+
+.headerLogoImage {
+  width: 20rem;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 1.8rem;
+
+  @include breakpoint(mobile) {
+    width: 18rem;
+  }
+}
+
+.headerLogoText {
+  padding-left: 1.8rem;
+  border-left: 1px solid rgba(#000000, 0.3);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  margin-right: 6rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.headerNavLink {
+  font-size: 1.4rem;
+  line-height: 130%;
+  margin-right: 3rem;
+  white-space: nowrap;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+.headerDvsnLink {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.headerDvsnLinkImage {
+  width: 6rem;
+  height: auto;
+  display: block;
+}
+
+.headerControls {
+  display: inline-flex;
+  align-items: center;
+  
+}
+
+.headerMenu {
+  margin: 0 auto;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.headerLoginLink {
+  display: inline-flex;
+  text-align: center;
+  font-size: 1.4rem;
+  background-color: var(--primary-color);
+  line-height: 130%;
+  color: white;
+  padding: 1.05rem 2rem;
+  border-radius: 0.4rem;
+  margin-right: 1.5rem;
+
+  // @include breakpoint(mobile) {
+  //   padding: .8rem 1.4rem;
+  // }
+  &:last-child {
+      margin-right: 0;
+  }
+  &:link,
+  &:visited {
+    color: white;
+  }
+}
+
+
+.headerBurgerBtn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3.8rem;
+    height: 3.8rem;
+    border: 1px solid #2E3F4B;
+    border-radius: .4rem;
+
+    span {
+        width: 1.6rem;
+        height: 0.2rem;
+        background: #2E3F4B;
+        margin-bottom: 0.4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import "../../scss/mixins";
+
+.developers {
+    background: #F2F2F2;
+    
+}
+
+.developersContent {
+    padding: 12rem 0;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 3rem 0;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: rgba(#2E3F4B, .1);
+        pointer-events: none;
+    }
+}
+
+.developersHeading {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  margin-bottom: 12rem;
+  text-align: center;
+
+  @include breakpoint(mobile) {
+      font-size: 2rem;
+      line-height: 1.3;
+      margin-bottom: 3rem;
+  }
+}
+
+
+.developersList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.developersListItem {
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.5rem;
+    }
+
+    
+}
+
+.developersCard {
+    display: flex;
+    flex-direction: column;
+    width: 24rem;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 9rem;
+    border-right: 1px solid #E0E0E0;
+
+    @include breakpoint(mobile) {
+        width: 12rem;
+        height: 4.5rem;
+    }
+}
+
+.developersListItem:last-child .developersCard {
+    border-right: none;
+}
+
+.developersCardImage {
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: 70%;
+    max-height: 85%;
+    object-fit: contain;
+}

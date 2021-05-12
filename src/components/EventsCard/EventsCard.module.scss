@@ -1,0 +1,162 @@
+.eventsCard {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 44.7rem;
+  position: relative;
+  z-index: 1;
+  border-radius: 0.5rem;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: color .2s, border-color .2s;
+  &:hover {
+   
+    .eventsCardDate {
+      color: rgba(white, 0.5);
+    }
+    .eventsCardBtn {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .eventsCardBg::after {
+      opacity: 1;
+    }
+
+    .eventsCardContent {
+      color: white;
+      background-color: transparent;
+    }
+
+    .eventsCardTickets {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+
+    .eventsCardTitleBlock {
+      transform: translateY(-6rem);
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.eventsCardBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+ 
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 0.01%,
+      rgba(21, 29, 34, 0.06) 100%
+    );
+    transition: opacity 0.3s;
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.eventsCardBgImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.eventsCardContent {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fff;
+  color: var(--text-color);
+  margin-top: auto;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.eventsCardTitleBlock {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 2rem;
+  transition: transform 0.2s;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 6.8rem;
+    height: 1.5px;
+    background-color: #fff;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+}
+
+.eventsCardDate {
+  font-size: 1.4rem;
+  line-height: 130%;
+  margin-bottom: 1rem;
+  color: rgba(#2e3f4b, 0.5);
+  transition: color 0.2s;
+}
+
+.eventsCardTitle {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 130%;
+}
+
+.eventsCardBtn {
+  padding: 1.4rem 2.5rem;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 150%;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.4rem;
+  color: var(--primary-color);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.eventsCardTickets {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  margin-top: 2rem;
+  display: inline-flex;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: var(--primary-color);
+  opacity: 0;
+  visibility: hidden;
+  em {
+    font-style: normal;
+    color: rgba(#7ecb2b, 0.5);
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../scss/mixins";
+
+.eventsList {
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
+}
+
+.eventsListTopRow {
+  margin-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-top: 1px solid #e5e5e5;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 1rem;
+  }
+  
+  &::before {
+    content: "";
+    width: 6rem;
+    height: 2px;
+    background-color: var(--primary-color);
+    top: 0;
+    transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+  }
+}
+
+.eventsListHeading {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  margin-right: 2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+}
+
+.eventsListGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.eventsListLink {
+  display: inline-flex;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: var(--primary-color);
+  white-space: nowrap;
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+}
