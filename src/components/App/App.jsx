@@ -14,7 +14,7 @@ const App = () => {
     }
   }, []);
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="page-content">
         <Header />
         <main className="page-main">
