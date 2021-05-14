@@ -1,0 +1,115 @@
+@import "../../scss/mixins";
+
+.login {
+  padding-top: 12rem;
+  padding-bottom: 17rem;
+
+  @include breakpoint(mobile) {
+    padding: 7rem 0;
+  }
+}
+
+.loginRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 3rem;
+  @include breakpoint(mobile) {
+    grid-gap: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.loginCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginHeading {
+  font-weight: 500;
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+  margin-bottom: 2.8rem;
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+  }
+}
+
+.loginText {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 150%;
+  max-width: 44rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+}
+
+.loginForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  max-width: 46rem;
+  padding-top: 1rem;
+}
+
+.loginSubmit {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 150%;
+  padding: 1.4rem 2.8rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  transition: background-color 0.2s;
+  color: white;
+  border-radius: 0.4rem;
+  margin-top: 3rem;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    background-color: var(--primary-color-hover);
+  }
+}
+
+.loginAlert {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: #eb5757;
+  display: block;
+  margin-top: .7rem;
+}
+
+.loginAlertLink {
+  text-decoration: underline;
+}
+
+.loginInputWrapper {
+  display: block;
+}
+
+.loginInput {
+  background: #e0e0e0;
+  border-radius: 0.4rem;
+  height: 5rem;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 150%;
+  color: #2e3f4b;
+  padding: 0 1.5rem;
+  display: block;
+  width: 100%;
+
+  @include placeholder {
+    color: rgba(#2e3f4b, 0.3);
+  }
+}
+
+

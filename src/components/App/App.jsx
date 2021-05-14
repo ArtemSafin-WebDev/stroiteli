@@ -4,6 +4,8 @@ import { primaryInput } from "detect-it";
 import HomePage from "../../pages/HomePage";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import LoginPage from "../../pages/LoginPage";
+import AccountPage from "../../pages/AccountPage";
 
 const App = () => {
   useEffect(() => {
@@ -19,6 +21,12 @@ const App = () => {
         <Header />
         <main className="page-main">
           <Switch>
+            <Route path="/account">
+              <AccountPage/>
+            </Route>
+            <Route path="/login">
+              <LoginPage/>
+            </Route>
             <Route path="/" exact>
               <HomePage />
             </Route>

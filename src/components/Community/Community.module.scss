@@ -7,11 +7,16 @@
   display: inline-flex;
   align-items: center;
   padding-left: 1.5rem;
-  margin-right: 2rem;
+  
   transition: color .2s;
+  margin-left: 2rem;
+  @include breakpoint(large-desktop) {
+    display: none;
+  }
 
   @include breakpoint(tablet) {
     margin-left: auto;
+    
   }
  
 

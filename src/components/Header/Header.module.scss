@@ -43,6 +43,10 @@
   font-size: 1.2rem;
   line-height: 1.4rem;
 
+  @include breakpoint(laptop) {
+    display: none;
+  }
+
   @include breakpoint(mobile) {
     display: none;
   }
@@ -51,7 +55,7 @@
 .headerNav {
   display: flex;
   align-items: center;
-  margin-right: 6rem;
+  
 
   @include breakpoint(mobile) {
     display: none;
@@ -86,6 +90,11 @@
 .headerControls {
   display: inline-flex;
   align-items: center;
+  margin-left: 2rem;
+
+  @include breakpoint(tablet) {
+    margin-left: auto;
+  }
   
 }
 
@@ -107,7 +116,7 @@
   padding: 1.05rem 2rem;
   border-radius: 0.4rem;
   margin-right: 1.5rem;
-
+  transition: color .2s, background-color .2s;
   // @include breakpoint(mobile) {
   //   padding: .8rem 1.4rem;
   // }
@@ -117,6 +126,10 @@
   &:link,
   &:visited {
     color: white;
+  }
+
+  &:hover {
+    background-color: var(--primary-color-hover);
   }
 }
 

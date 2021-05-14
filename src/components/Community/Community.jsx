@@ -36,7 +36,7 @@ const Community = () => {
       <div className={styles.communityTitle}>Комьюнити</div>
       <div className={styles.communityPersons}>
         {
-            persons.map(person => <div className={styles.communityPerson}>
+            persons.map(person => <div className={styles.communityPerson} key={person.imageSrc}>
                 <img src={person.imageSrc} alt="Член сообщества" className={styles.communityPersonImage}/>
             </div>)
         }

@@ -72,7 +72,7 @@ const Header = () => {
           <Community />
 
           <div className={styles.headerControls}>
-            <Link to="/" className={styles.headerLoginLink}>Войти</Link>
+            <Link to="/login" className={styles.headerLoginLink}>Войти</Link>
 
             <button type="button" className={styles.headerBurgerBtn}>
                 <span></span>
