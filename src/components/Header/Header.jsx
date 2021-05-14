@@ -17,7 +17,7 @@ const Header = () => {
     },
     {
       title: "Медиа",
-      href: "/",
+      href: "/media",
     },
     {
       title: "Мероприятия",

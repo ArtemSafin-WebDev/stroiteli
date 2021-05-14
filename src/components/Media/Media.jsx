@@ -4,7 +4,7 @@ import { ReactComponent as ViewsIcon } from "../../icons/eye.svg";
 import { ReactComponent as CommentsIcon } from "../../icons/bubble.svg";
 import { ReactComponent as BookmarkIcon } from "../../icons/bookmark.svg";
 
-const Media = () => {
+const Media = (props) => {
   const [simpleCards, setSimpleCards] = useState([
     {
       id: 1,
@@ -96,12 +96,14 @@ const Media = () => {
   ]);
   return (
     <div className={styles.media}>
-      <div className={styles.mediaHeadingBlock}>
-        <h2 className={styles.mediaMainHeading}>Медиа</h2>
-        <a href="#" className={styles.mediaShowMore}>
-          смотреть все →
-        </a>
-      </div>
+      {!props.noHeading && (
+        <div className={styles.mediaHeadingBlock}>
+          <h2 className={styles.mediaMainHeading}>Медиа</h2>
+          <a href="#" className={styles.mediaShowMore}>
+            смотреть все →
+          </a>
+        </div>
+      )}
 
       <div className={styles.mediaRow}>
         <div className={styles.mediaLeftCol}>
@@ -199,9 +201,10 @@ const Media = () => {
           <div className={styles.mediaCardsWithImages}>
             {cardsWithImages.map((card) => (
               <div className={styles.mediaCardWithImage}>
-                <a href="#" className={styles.mediaCardWithImageLinkWrapper}>
-
-                </a>
+                <a
+                  href="#"
+                  className={styles.mediaCardWithImageLinkWrapper}
+                ></a>
                 <div className={styles.mediaCardWithImageContainer}>
                   <img
                     src={card.image}

@@ -320,7 +320,7 @@
   &::before {
     content: "";
     display: block;
-    padding-bottom: 66.5%;
+    padding-bottom: 65%;
 
     @include breakpoint(mobile) {
       padding-bottom: 56.25%;

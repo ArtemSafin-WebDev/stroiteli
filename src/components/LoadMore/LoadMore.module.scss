@@ -1,0 +1,38 @@
+@import "../../scss/mixins";
+
+
+.loadMore {
+  margin-bottom: 9rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 5rem;
+  }
+ 
+}
+
+.loadMoreWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadMoreBtn {
+  padding: 1.5rem;
+  min-width: 22rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 150%;
+  background-color: var(--primary-color);
+  border-radius: .4rem;
+  transition: color .2s, background-color .2s;
+  color: white;
+  &:link,
+  &:visited {
+      color: white;
+  }
+
+
+  &:hover {
+    background-color: var(--primary-color-hover);
+  }
+}

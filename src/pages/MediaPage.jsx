@@ -1,27 +1,28 @@
 import React from "react";
-import Developers from "../components/Developers/Developers";
-import EventsList from "../components/EventsList/EventsList";
+
+import Discussions from "../components/Discussions/Discussions";
+
 import InterviewsList from "../components/InterviewsList/InterviewsList";
+import LoadMore from "../components/LoadMore/LoadMore";
 import Media from "../components/Media/Media";
 
 import News from "../components/News/News";
 import Podcasts from "../components/Podcasts/Podcasts";
-import Publications from "../components/Publications/Publications";
+import Search from "../components/Search/Search";
 
-
-const HomePage = () => {
+const MediaPage = () => {
   return (
     <>
+      <Search />
       <News>
-        <Media/>
-        <Publications/>
+        <Media noHeading={true} />
+        <Discussions />
       </News>
       <InterviewsList />
-      <EventsList />
+      <LoadMore />
       <Podcasts />
-      <Developers />
     </>
   );
 };
 
-export default HomePage;
+export default MediaPage;

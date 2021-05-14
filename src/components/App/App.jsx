@@ -6,13 +6,14 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import LoginPage from "../../pages/LoginPage";
 import AccountPage from "../../pages/AccountPage";
+import MediaPage from "../../pages/MediaPage";
 
 const App = () => {
   useEffect(() => {
-    if (primaryInput === 'touch') {
-      document.body.classList.add('touch');
+    if (primaryInput === "touch") {
+      document.body.classList.add("touch");
     } else {
-      document.body.classList.add('no-touch');
+      document.body.classList.add("no-touch");
     }
   }, []);
   return (
@@ -21,11 +22,14 @@ const App = () => {
         <Header />
         <main className="page-main">
           <Switch>
+            <Route path="/media">
+              <MediaPage />
+            </Route>
             <Route path="/account">
-              <AccountPage/>
+              <AccountPage />
             </Route>
             <Route path="/login">
-              <LoginPage/>
+              <LoginPage />
             </Route>
             <Route path="/" exact>
               <HomePage />

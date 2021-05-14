@@ -191,6 +191,13 @@
   margin-top: auto;
   margin-bottom: 3rem;
 
+  &:hover {
+    .podcastsSelectedPodcastPlayBtn {
+      color: var(--primary-color);
+    }
+    
+  }
+
   @include breakpoint(mobile) {
     border: none;
     flex-direction: column;
@@ -243,6 +250,7 @@
   align-items: center;
   font-size: 1.4rem;
   line-height: 130%;
+  transition: color .2s;
 }
 
 .podcastsSelectedPodcastPlayBtnIcon {
