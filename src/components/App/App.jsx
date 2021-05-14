@@ -7,6 +7,7 @@ import Header from "../Header/Header";
 import LoginPage from "../../pages/LoginPage";
 import AccountPage from "../../pages/AccountPage";
 import MediaPage from "../../pages/MediaPage";
+import AboutProject from "../../pages/AboutProject";
 
 const App = () => {
   useEffect(() => {
@@ -22,6 +23,9 @@ const App = () => {
         <Header />
         <main className="page-main">
           <Switch>
+            <Route path="/project">
+              <AboutProject/>
+            </Route>
             <Route path="/media">
               <MediaPage />
             </Route>

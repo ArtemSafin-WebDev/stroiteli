@@ -53,7 +53,7 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li className={styles.footerMenuListItem}>
-                    <Link to="/" className={styles.footerMenuLink}>
+                    <Link to="/media" className={styles.footerMenuLink}>
                       Медиа
                     </Link>
                   </li>
@@ -82,7 +82,7 @@ const Footer = () => {
               <div className={styles.footerMenuCol}>
                 <ul className={styles.footerMenuList}>
                   <li className={styles.footerMenuListItem}>
-                    <Link to="/" className={styles.footerMenuLink}>
+                    <Link to="/project" className={styles.footerMenuLink}>
                       О платформе
                     </Link>
                   </li>
