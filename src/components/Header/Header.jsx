@@ -7,34 +7,46 @@ import Community from "../Community/Community";
 
 const Header = () => {
   const [menuItems, setMenuItems] = useState([
+    // {
+    //   title: "База знаний",
+    //   href: "/",
+    // },
+    // {
+    //   title: "Университет",
+    //   href: "/",
+    // },
     {
-      title: "База знаний",
-      href: "/",
-    },
-    {
-      title: "Университет",
-      href: "/",
+      title: "О проекте",
+      href: "/project",
     },
     {
       title: "Медиа",
       href: "/media",
     },
     {
-      title: "Мероприятия",
-      href: "/",
+      title: "Вход",
+      href: "/login",
     },
     {
-      title: "Аналитика",
-      href: "/",
+      title: "Личный кабинет",
+      href: "/account"
     },
-    {
-      title: "Центр консалтинга",
-      href: "/",
-    },
-    {
-      title: "Омбудсмен",
-      href: "/",
-    },
+    // {
+    //   title: "Мероприятия",
+    //   href: "/",
+    // },
+    // {
+    //   title: "Аналитика",
+    //   href: "/",
+    // },
+    // {
+    //   title: "Центр консалтинга",
+    //   href: "/",
+    // },
+    // {
+    //   title: "Омбудсмен",
+    //   href: "/",
+    // },
   ]);
 
   return (
